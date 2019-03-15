@@ -1,0 +1,45 @@
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Password incorrrect try again</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <style>
+        body {
+            background-image:url("../static/back.jpg")
+        }
+        #div{
+     padding-top: 30px;
+    }
+        #inp{
+            width:50%;
+        }
+        #div{
+
+        }
+        #btn {
+            margin-top:10px;
+        }
+    </style>
+    <script>
+
+        </script>
+    </head>
+
+    <body>
+        <div id="div">
+        <center>
+            <h1 class="ui header">Please enter correct details. Try again.</h1>
+           <br> <p >If it happens more than 3 times, please try again later. (Server Down)</p>
+        <form class="ui form" method="POST" action="/attendance">
+     Acc ID :<input class="ui input fields" id="inp" type= "text" name="username" required><br>
+     Password : <br><input type = "password" id="inp" name="password" required><br>
+     <button id ="btn" class="ui button primary" type="submit">Submit</button>
+        </form>
+        <h3 class="ui header">Initiative by Tushar Upadhyay</h3>
+        <p >Concept by : Arnav and Tushar </p>
+        <p >Graphics by : Arnav </p>
+        </center>
+        </div>
+    </body>
+
+    </html>

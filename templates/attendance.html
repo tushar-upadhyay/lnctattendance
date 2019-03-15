@@ -1,0 +1,108 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <title>
+            Attendance</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <style>
+            body{
+  background-image: url("../static/back.jpg")
+
+            }
+            #tus{
+               font-size: 20px;
+            }
+            #arv{
+                font-size: 19px;
+            }
+            #btn{
+            display: inline;
+            margin-top: 20px;
+            }
+            #p{
+                font-size: 20px;
+            }
+            #share{
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+            <center>
+    <div id="div">
+            <img alt="stuimage" src="{{img}}" style="border: 1px solid #7C7979;
+            width: 60px; height: 60px">
+
+                    <h3 >Welcome: {{name}}</h3>
+        <h1>{{total}}</h1><br>
+         <h2 >{{present}}</h2>
+
+        </div>
+        <a href="/">
+            <button onclick="" id="btn" class="ui button primary">CHECK AGAIN?
+           </button>
+           </a>
+
+           <a href="/aboutme">
+            <button class="ui primary button">About us</button>
+            </a>
+
+    </center>
+       <script>var P = "{{present}}"
+            var total = "{{total}}"
+            var t1= total.split("")
+            t1.splice(0,18)
+            var t2 = t1.join("")
+             var data = P.split("")
+             data.splice(0,13)
+             var datas = data.join("")
+             console.log(datas)
+             console.log(t2)
+             datas = parseInt(datas)
+             t2 = parseInt(t2)
+             var attend = parseInt(datas)/parseInt(t2)*100;
+             var nextp = parseInt(datas) + 7;
+             var nexta = parseInt(datas);
+             var nextt = parseInt(t2) + 7;
+             var nextadd = nextp/nextt*100;
+             var nextabs = nexta/nextt*100;
+             var res = 75 - attend;
+             if(res<0){
+
+                 res = "Congratulations! Your attendance is above 75 %"
+             }
+             else{
+                 var days = parseInt(((75*t2) -(100*datas))/175) + 1;
+                 res = "DEKH BHAI ! " + days + " din aur chale ja 75 % ho jayegi"
+             }
+            var p = document.createElement("H1")
+             var t = document.createTextNode("Your Attendance :" + parseFloat(attend).toFixed(2) + " %")
+             p.appendChild(t)
+             document.querySelector("#div").appendChild(p)
+             var next = document.createElement("H2");
+             next.setAttribute("id","arv");
+             var datanext = document.createTextNode("If you Attend college tomorrow your attendance will be : " + parseFloat(nextadd).toFixed(2) + " %")
+             next.appendChild(datanext)
+             document.querySelector("#div").appendChild(next)
+             var nextabsent = document.createElement("H5");
+             nextabsent.setAttribute("id","arv");
+             var datanexta = document.createTextNode("If you bunk tomorrow your attendance will be : " + parseFloat(nextabs).toFixed(2) + " %")
+
+             nextabsent.appendChild(datanexta);
+             document.querySelector("#div").appendChild(nextabsent)
+             var warning = document.createElement("H")
+             warning.setAttribute("id","tus")
+             var rest = document.createTextNode(res)
+             warning.appendChild(rest)
+             document.querySelector("#div").appendChild(warning)
+             </script>
+             <center>
+                 <div id="share">
+                     <p id="p"><strong>Liked this? Share it with your friends</strong></p>
+                    <a href="whatsapp://send?text=A new Way to Check your attendance. Directly linked with Acc soft ..check now https://newlnct.herokuapp.com">
+                        <button class="ui primary button">Share via Whatsapp!</button>
+                        </a>
+                 </div>
+             </center>
+            </body>
+</html>

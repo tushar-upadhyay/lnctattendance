@@ -1,0 +1,112 @@
+        <html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<style>
+ body{
+  background: url("../static/tus13.jpg") no-repeat center center fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: fixed;
+
+ }
+    #inp{
+        width:50%;
+    }
+    #div{
+     padding-top: 30px;
+    
+    }
+    #btn {
+        margin-top:10px;
+    }
+    #div1{
+        margin-top: 25px;
+        width: 250px;
+    }
+    #p1{
+        padding-top: 20px;
+    }
+    #btn1{
+        padding-top:20px;
+    }
+
+    .modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+ }
+ #tushar{
+      height: 50%;
+ }
+.modal-content {
+ 
+  margin: auto;
+  
+height: 100%;
+  width: 100%;
+}
+#android{
+  margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+    <div id="div">
+            
+<div id="myModal" class="modal">
+
+        <div class="modal-content">
+                <div id="tushar" class="ui segment">
+                        <div class="ui active dimmer">
+                          <div class="ui text loader"><p id="text">Getting your Attendance....</p></div>
+                        </div>
+                       
+                      </div>
+        </div>
+      
+      </div>
+<center>
+    <form onsubmit="loader()"  class="ui form" method="POST" action="/attendance">
+ Acc ID :<input class="ui input fields" id="inp" type= "text" name="username" required><br>
+ Password : <br><input type = "password" id="inp" name="password" required><br>
+ <button id ="btn" class="ui button primary" type="submit">Submit</button>
+    </form>
+   
+    <div id="btn1">
+    <a href="/aboutme">
+        <button class="ui primary button">About us</button>
+        </a>
+        <a href="whatsapp://send?text=A new Way to Check your attendance. Directly linked with Acc soft ..check now https://newlnct.herokuapp.com">
+          <button class="ui primary button">Share via Whatsapp!</button>
+          </a>
+    </div>
+    <div id="div1">
+        
+          <p id="p1">Note: All data is encrypted using AES_128_GCM Algorithm</p>
+        </div>
+        
+        <label id="android" class="ui label">Android Version will be made available soon!</label>
+ </center>
+    </div>
+    <script>
+        var btn  = document.getElementById("btn")
+        var model  = document.getElementById("myModal")
+
+       function loader(){
+           model.style.display = "block"
+
+        }
+
+    </script>
+</body>
+
+</html>
