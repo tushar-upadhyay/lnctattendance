@@ -3,7 +3,7 @@ from main import main
 
 app = Flask(__name__)
 
-@app.route("/api",methods = ["GET"])
+@app.route("/api",methods = ["GET","POST","PUT"])
 def api():
 
     if('App-id' in request.headers and 'username' in request.args and "password" in request.args):
@@ -27,6 +27,9 @@ def api():
 @app.route("/")
 def index():
     return render_template("index.html")
+@app.route("/aboutme")
+def aboutme():
+    return render_template("aboutme.html")
 @app.route("/attendance",methods = ["POST","GET"])
 def attendance():
     if request.method =="POST":
@@ -38,4 +41,4 @@ def attendance():
         return redirect("/")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
