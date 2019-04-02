@@ -1,8 +1,9 @@
 from flask import Flask,render_template,request,redirect,jsonify
 from main import main
-
+# We are importing Cors to enable cross origin requests(cors)
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 @app.route("/api",methods = ["GET","POST","PUT"])
 def api():
 
