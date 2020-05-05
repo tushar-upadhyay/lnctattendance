@@ -19,7 +19,7 @@ def getResult(rollNo,semester,results,errors):
     soup  =  BeautifulSoup(html, 'html.parser')
     imageUrl = "http://result.rgpv.ac.in/Result/"
     imageUrl = imageUrl + soup.findAll("img")[1]['src']
-    # I am using google vision but feek free to use any service you just have tp create a function detect_text_uri(imageUrl) that should
+    # I am using google vision but feel free to use any service you just have to create a function detect_text_uri(imageUrl) that should
     # return a captcha text
     captcha = detect_text_uri(imageUrl)
     import random
