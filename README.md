@@ -10,7 +10,7 @@ You can use the API's in your application to get data
 Make a get request to: 
 https://newlnct.herokuapp.com/?username=youraccsoftid&password=yourpassword
 
-<i>E.g. https://newlnct.herokuapp.com/username=123&password=123</i>
+<i>E.g. https://newlnct.herokuapp.com/?username=123&password=123</i>
 ##### Datewise attendance 
 Make a get request to: 
 https://newlnct.herokuapp.com/dateWise?username=id&password=pass
