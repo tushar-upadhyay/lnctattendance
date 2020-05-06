@@ -1,5 +1,5 @@
 
-<h2>LNCT Attendance and RGPV Results Fetcher  
+<h2>LNCT Attendance and RGPV Results Fetcher  </h2>
 
 This is a flask based application which provides apis to get different data of LNCT Bhopal and RGPV Bhopal
 
