@@ -26,7 +26,9 @@ Make a get request to:
 https://newlnct.herokuapp.com/getDateWiseAttendance?username=id&password=pass
 
 <i>E.g. https://newlnct.herokuapp.com/getDateWiseAttendance?username=123&password=123</i>
-
+### Important 
+<b>If you are student of LNCT University then include &lnctu at the end of each url</b><br>
+<i>https://newlnct.herokuapp.com/?username=username&password=pass&lnctu</i>
 ### RGPV Result
 Make a get request to: 
 https://newlnct.herokuapp.com/api?rollNo=enrollment&semester=semester&stream=code
