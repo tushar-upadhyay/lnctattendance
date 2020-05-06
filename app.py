@@ -55,7 +55,7 @@ def logout():
 def dateWiseAttendance():
     if ('username' in request.args and "password" in request.args):
         if (request.args['username'] == "123" and request.args['password'] == "123"):
-            response = getDateWiseAttendace("11156823968", "tushar#123")
+            response = getDateWiseAttendace(os.getenv('myid'), os.getenv('mypassword'))
         elif ('lnctu' in request.args):
             response = getDateWiseAttendace(request.args['username'], request.args['password'], True)
         else:
@@ -222,7 +222,7 @@ def login():
     else:
         if ('username' in request.args and "password" in request.args and 'token' in request.args):
             if(request.args['username']=="123" and request.args['password']=="123"):
-                response = getName("11156823968", "tushar#123", "test")
+                response = getName(os.getenv('myid'), os.getenv('mypassword'), "test")
             elif('lnctu' in request.args):
                 response = getName(request.args['username'], request.args['password'],request.args['token'],True)
             else:
@@ -260,7 +260,7 @@ def getStats():
 def apires():
     if ('username' in request.args and 'password' in request.args):
         if (request.args['username'] == "123" and request.args['password'] == "123"):
-            response = main("11156823968", "tushar#123")
+            response = main(os.getenv('myid'),os.getenv('mypassword'))
         elif ('lnctu' in request.args):
             response = main(request.args['username'], request.args['password'],True)
         else:
@@ -296,7 +296,7 @@ def aboutme():
 def subject():
     if ('username' in request.args and "password" in request.args):
         if (request.args['username'] == "123" and request.args['password'] == "123"):
-            response = subjectWise("11156823968", "tushar#123")
+            response = subjectWise(os.getenv('myid'), os.getenv('mypassword'))
         elif ('lnctu' in request.args):
             response = subjectWise(request.args['username'], request.args['password'], True)
         else:
@@ -319,7 +319,7 @@ def registerToken():
 def datewise():
     if ('username' in request.args and "password" in request.args):
         if (request.args['username'] == "123" and request.args['password'] == "123"):
-            response = dateWise("11156823968", "tushar#123")
+            response = dateWise(os.getenv('myid'), os.getenv('mypassword'))
         elif ('lnctu' in request.args):
             response =dateWise(request.args['username'], request.args['password'],True)
         else:
