@@ -18,7 +18,7 @@ Flask-SSLify==0.1.5
 gcloud==0.18.3
 googleapis-common-protos==1.6.0
 gunicorn==19.9.0
-httplib2==0.13.1
+httplib2==0.18.0
 idna==2.8
 google-cloud-vision==0.41.0
 google-cloud==0.34.0
