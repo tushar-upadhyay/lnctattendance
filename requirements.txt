@@ -46,7 +46,7 @@ redis==3.3.8
 requests==2.22.0
 requests-toolbelt==0.9.1
 rq==1.1.0
-rsa==4.0
+rsa==4.1
 shellescape==3.4.1
 six==1.12.0
 soupsieve==1.9.2
