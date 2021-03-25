@@ -41,7 +41,7 @@ pyfcm==1.4.7
 PyJWT==1.7.1
 python-jwt==3.2.4
 pytz==2019.2
-PyYAML==5.1.2
+PyYAML==5.4
 redis==3.3.8
 requests==2.22.0
 requests-toolbelt==0.9.1
