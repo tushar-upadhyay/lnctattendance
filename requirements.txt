@@ -12,7 +12,7 @@ cryptography==2.7
 exponent-server-sdk==0.2.0
 firebase==3.0.1
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-JWT-Extended==3.24.0
 Flask-SSLify==0.1.5
 gcloud==0.18.3
