@@ -3,7 +3,7 @@ asn1crypto==0.24.0
 beautifulsoup4==4.8.0
 billiard==3.6.1.0
 bs4==0.0.1
-celery==4.3.0
+celery==5.2.2
 certifi==2019.6.16
 cffi==1.12.3
 chardet==3.0.4
